@@ -13,6 +13,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+        [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:(10/255.0) green:(188/255.0) blue:(186/255.0) alpha:1]];
+    }
+    else{
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:(10/255.0) green:(188/255.0) blue:(186/255.0) alpha:1]];
+    }
+    
     return YES;
 }
 							
